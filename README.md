@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# ReactJS Challenge
+A aplicação sera uma PWA que funcionará em cima da api do github Documentação API GITHUB, onde deve existir uma tela de login que o usuário digitará o nickname de um usuário do github, ao buscar esse usuário, ele deve ser redirecionado para uma tela interna onde estará disponível informações gerais do usuário conforme o protótipo, com uma navegação de tabs para Início, Repositórios, Seguidores, Seguindo.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Protótipo da aplicação
+- O protótipo do aplicativo está disponível no link link (tente reproduzir o layout da forma mais fiel possível)
+- O layout é o mesmo da aplicação react-native.
 
-## Available Scripts
+## Requisitos não funcionais
+- O aplicativo deve usar reactjs.
+- Você deve gerenciar suas rotas com o react-router.
+- Você deve gerenciar todo o estado do aplicativo com redux ou Context Api.
+- Para estilizar o aplicativo, adoraríamos ver você usando componentes estilizados, mas não é obrigatório.
 
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Requisitos funcionais
+- Você deve permitir que um usuário seja autenticado buscando pelo username do github
+- Você deve armazenas as informações de (login, name, email, location, company, bio, avatar_url, followers_url, following_url, organizations_url, starred_url, public_repos, public_gists, followers, following)
+- Você deve possuir uma navegação por abas com items ("Início", "Repositórios", "Seguidores", "Seguindo")
+- Quando clicado nas abas deve ser exibido as listagens respectivas de ("Início", Repositórios: repos_url, Seguidores: followers_url e Seguindo: following_url)
+- Quando o usuário estiver dentro de uma aba de seguidores ou seguindo, você deve ter um botão que torne aquele usuário o principal da aplicação, substituindo o usuário salvo na autenticação pelo usuário da tela atual.
+- Na tela início, você deve ter um botão que permita o usuário sair da aplicação o redirecionando para a tela de autenticação
+- Na tela início, você deve apenas renderizar as informações do protótipo se a informação de fato existir no retorno da requisição de autenticação.
